@@ -1,0 +1,14 @@
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+.site-header {
+  margin-top: 2.4rem;
+  display: block;
+  overflow: auto;
+  a {
+    text-decoration: none;
+  }
+  .site-branding .logo {
+    width: 300px;
+  }
+}

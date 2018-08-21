@@ -1,6 +1,6 @@
 <?php
 /**
- * Quotes on Dev Theme functions and definitions.
+ * Quotes on Dev Starter Theme functions and definitions.
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
@@ -24,7 +24,13 @@ function qod_setup() {
 	) );
 
 	// Switch search form, comment form, and comments to output valid HTML5.
-	add_theme_support( 'html5', array( 'search-form' ) );
+	add_theme_support( 'html5', array(
+		'search-form',
+		'comment-form',
+		'comment-list',
+		'gallery',
+		'caption',
+	) );
 
 }
 endif; // qod_setup
@@ -56,9 +62,16 @@ add_filter( 'stylesheet_uri', 'qod_minified_css', 10, 2 );
  * Enqueue scripts and styles.
  */
 function qod_scripts() {
+	wp_enqueue_script( 'jquery' );
+
 	wp_enqueue_style( 'qod-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'font-awesome-cdn', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css', array(), '4.4.0' );
 
 	wp_enqueue_script( 'qod-skip-link-focus-fix', get_template_directory_uri() . '/build/js/skip-link-focus-fix.min.js', array(), '20130115', true );
+
+	/**
+	 * @TODO add localize script rest api JavaScript
+	 */
 }
 add_action( 'wp_enqueue_scripts', 'qod_scripts' );
 
@@ -80,4 +93,5 @@ require get_template_directory() . '/inc/metaboxes.php';
  /**
  * Custom WP API modifications.
  */
-require get_template_directory() . '/inc/api.php';
+ require get_template_directory() . '/inc/api.php';
+ 

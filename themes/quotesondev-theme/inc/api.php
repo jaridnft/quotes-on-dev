@@ -147,3 +147,4 @@ function qod_update_quote_meta_fields( $value, $object, $field_name ) {
   
   return update_post_meta( $object->ID, $field_name, strip_tags( $value ) );
 }
+      

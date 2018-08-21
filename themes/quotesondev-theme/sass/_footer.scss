@@ -1,0 +1,49 @@
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+
+.site-footer {
+  .site-info {
+    margin-top: 72px;
+    margin-bottom: 60px;
+  }
+  .footer-navigation {
+    position: relative;
+    margin: 1em;
+    overflow: hidden;
+    display: flex;
+    margin: 0;
+  }
+  ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: -1px;
+    margin-bottom: 0;
+    padding-left: 0;
+    li {
+      flex-grow: 1;
+      flex-basis: auto;
+      margin: 0.1em 0;
+      padding: 0 1em;
+      text-align: center;
+      border-left: 1px white solid;
+      line-height: 1;
+      &:first-child {
+        padding-left: 0;
+      }
+      a {
+        text-decoration: none;
+        font-weight: 300;
+      }
+    }
+  }
+  p {
+    margin-top: 16px;
+    font-weight: 300;
+    a {
+      text-decoration: none;
+    }
+  }
+}

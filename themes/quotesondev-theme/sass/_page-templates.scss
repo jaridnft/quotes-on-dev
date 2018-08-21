@@ -2,6 +2,40 @@
 # Page Templates
 --------------------------------------------------------------*/
 
+/* Main Body of Home Page */
+
+.front-page-content-area {
+  font-size: 20px;
+  font-weight: 300;
+  .entry-content {
+    margin-top: 20px;
+    margin-bottom: 24px;
+  }
+  .entry-meta {
+    margin-bottom: 48px;
+  }
+  p {
+    margin: 0;
+  }
+  h2 {
+    font-size: 20px;
+    font-weight: 300;
+    display: inline;
+  }
+  .source a {
+    text-decoration: none;
+  }
+}
+#new-quote-button {
+  background: none;
+  border: 2px $color__link solid;
+  box-shadow: none;
+  color: $color__link;
+  text-shadow: none;
+  font-weight: 500;
+  padding: 12px 36px;
+}
+
 /* All Archives Page */
 
 /* Submit a Quote Page */
