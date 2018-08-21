@@ -23,7 +23,6 @@ ehthumbs.db
  # Ignore everything in "wp-content" except these directories. #
 /*
 !.gitignore
-!plugins/
 !themes/
 !uploads/
 !README.md
