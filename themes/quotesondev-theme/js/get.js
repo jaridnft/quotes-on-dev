@@ -8,10 +8,9 @@
 
     $.ajax({
       beforeSend: xhr => xhr.setRequestHeader('X-WP-Nonce', apiVars.nonce),
-      url:
-        apiVars.restUrl +
-        'wp/v2/posts/' +
-        '?filter[orderby]=rand&filter[posts_per_page]=1',
+      url: `${
+        apiVars.restUrl
+      }wp/v2/posts/?filter[orderby]=rand&filter[posts_per_page]=1`,
       method: 'GET'
     })
       .done(data => {
