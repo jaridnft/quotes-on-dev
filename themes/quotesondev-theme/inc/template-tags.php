@@ -2,7 +2,7 @@
 /**
  * Custom template tags for this theme.
  *
- * @package QOD_Starter_Theme
+ * @package QOD_Theme
  */
 
 /**

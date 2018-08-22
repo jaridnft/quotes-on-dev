@@ -2,7 +2,7 @@
 /**
  * The template for displaying all single posts.
  *
- * @package QOD_Starter_Theme
+ * @package QOD_Theme
  */
 
 get_header(); ?>

@@ -23,7 +23,7 @@
       padding: 0 15px;
       text-align: center;
       border-left: 1px white solid;
-      line-height: 1;
+      line-height: 1.5;
       &:first-child {
         border-left: 0;
         padding-left: 0;
@@ -37,7 +37,6 @@
   p {
     margin-top: 16px;
     font-weight: 300;
-    line-height: 1;
     @include tablet {
       margin: 0;
       border-left: 1px white solid;

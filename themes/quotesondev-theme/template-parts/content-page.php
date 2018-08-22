@@ -2,7 +2,7 @@
 /**
  * Template part for displaying page content in page.php.
  *
- * @package QOD_Starter_Theme
+ * @package QOD_Theme
  */
 
 ?>

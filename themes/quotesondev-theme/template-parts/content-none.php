@@ -2,7 +2,7 @@
 /**
  * Template part for displaying a message that posts cannot be found.
  *
- * @package QOD_Starter_Theme
+ * @package QOD_Theme
  */
 
 ?>

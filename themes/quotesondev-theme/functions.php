@@ -1,10 +1,10 @@
 <?php
 /**
- * Quotes on Dev Starter Theme functions and definitions.
+ * Quotes on Dev Theme functions and definitions.
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package QOD_Starter_Theme
+ * @package QOD_Theme
  */
 
 if ( ! function_exists( 'qod_setup' ) ) :
@@ -61,6 +61,7 @@ add_filter( 'stylesheet_uri', 'qod_minified_css', 10, 2 );
 /**
  * Enqueue scripts and styles.
  */
+
 function qod_scripts() {
 	wp_enqueue_script( 'jquery' );
 
@@ -69,9 +70,16 @@ function qod_scripts() {
 
 	wp_enqueue_script( 'qod-skip-link-focus-fix', get_template_directory_uri() . '/build/js/skip-link-focus-fix.min.js', array(), '20130115', true );
 
-	/**
-	 * @TODO add localize script rest api JavaScript
-	 */
+	$script_url = get_template_directory_uri() . '/build/js/api.min.js';
+
+  wp_enqueue_script( 'jquery' );
+	wp_enqueue_script( 'generate_quote', $script_url, array( 'jquery' ), false, true );
+	
+  wp_localize_script( 'generate_quote', 'apiVars', array(
+			'restUrl' => esc_url_raw( rest_url() ),
+			'nonce' => wp_create_nonce( 'wp_rest' ),
+			'success' => "Thanks, your quote submission was received!",
+			'failure' => "Your submission could not be processed." ));
 }
 add_action( 'wp_enqueue_scripts', 'qod_scripts' );
 

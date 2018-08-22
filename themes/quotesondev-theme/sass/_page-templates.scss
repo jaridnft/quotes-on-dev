@@ -4,7 +4,7 @@
 
 /* Main Body of Home Page */
 
-.front-page-content-area {
+.site-content {
   font-size: 20px;
   font-weight: 300;
   .entry-content {
@@ -17,6 +17,9 @@
   p {
     margin: 0;
     max-width: 100%;
+    @include tablet {
+      font-size: 1.35rem;
+    }
   }
   h2 {
     font-size: 20px;
@@ -25,6 +28,7 @@
   }
   .source a {
     text-decoration: none;
+    font-style: italic;
   }
 }
 #new-quote-button {

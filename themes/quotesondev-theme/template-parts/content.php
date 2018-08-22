@@ -2,7 +2,7 @@
 /**
  * Template part for displaying posts.
  *
- * @package QOD_Starter_Theme
+ * @package QOD_Theme
  */
 
 /**

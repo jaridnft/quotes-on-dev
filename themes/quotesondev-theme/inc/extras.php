@@ -2,7 +2,7 @@
 /**
  * Custom functions that act independently of the theme templates.
  *
- * @package QOD_Starter_Theme
+ * @package QOD_Theme
  */
 
 /**
