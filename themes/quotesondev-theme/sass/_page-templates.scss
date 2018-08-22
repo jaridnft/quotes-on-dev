@@ -30,6 +30,28 @@
     text-decoration: none;
     font-style: italic;
   }
+  article::before {
+    @include desktop {
+      font-family: 'FontAwesome';
+      content: '\f10d';
+      // position: absolute;
+      color: #0c0;
+      font-size: 40px;
+      left: 190px;
+      top: 280px;
+    }
+  }
+  article::after {
+    @include desktop {
+      font-family: 'FontAwesome';
+      content: '\f10e';
+      // position: absolute;
+      color: #0c0;
+      font-size: 40px;
+      top: 280px;
+      right: 200px;
+    }
+  }
 }
 #new-quote-button {
   background: none;

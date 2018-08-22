@@ -16,7 +16,10 @@
       },
       beforeSend: xhr => xhr.setRequestHeader('X-WP-Nonce', apiVars.nonce)
     })
-      .done(() => alert(apiVars.success))
+      .done(() => {
+        $('.entry-header').after(`<p>${apiVars.success}</p>`);
+        $('.quote-submission-wrapper').hide(0);
+      })
       .fail(() => alert(apiVars.failure));
   });
 })(jQuery);
