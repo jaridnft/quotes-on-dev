@@ -76,6 +76,7 @@ function qod_scripts() {
 	wp_enqueue_script( 'generate_quote', $script_url, array( 'jquery' ), false, true );
 	
   wp_localize_script( 'generate_quote', 'apiVars', array(
+		  'rootUrl' => home_url(),
 			'restUrl' => esc_url_raw( rest_url() ),
 			'nonce' => wp_create_nonce( 'wp_rest' ),
 			'success' => "Thanks, your quote submission was received!",
