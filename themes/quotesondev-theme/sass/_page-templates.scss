@@ -78,6 +78,11 @@
     margin-top: 24px;
     font-size: 16px;
   }
+  h1 {
+    @include desktop {
+      margin: 0 0 25px 0;
+    }
+  }
 }
 
 /* All Archives Page */
@@ -89,6 +94,9 @@
     margin-bottom: 21px;
     font-size: 32px;
     font-weight: 500;
+    @include desktop {
+      margin: 0 0 25px 0;
+    }
   }
   h2 {
     margin: 20px 0;
@@ -183,6 +191,49 @@
 }
 
 /* 404 Page */
+
+.error-404 {
+  margin-right: auto;
+  .clearfix {
+    border: 0;
+    padding-left: 0;
+    margin-left: 0;
+  }
+  .search-submit {
+    background: 0;
+    box-shadow: none;
+    text-shadow: none;
+    border: 0;
+    color: $color__link;
+    font-size: 20px;
+    padding: 10px;
+  }
+  .search-field {
+    background-color: $color__background-body;
+    border: 2px $color__link solid;
+    padding: 3px 8px;
+  }
+  &::before {
+    @include desktop {
+      @include fat-quote(left);
+    }
+  }
+  &::after {
+    @include desktop {
+      @include fat-quote(right);
+    }
+  }
+  h1 {
+    @include desktop {
+      margin-top: 0;
+      font-size: 1.75rem;
+    }
+  }
+  p {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+}
 
 /* Search Page */
 
