@@ -2,11 +2,27 @@
 # Page Templates
 --------------------------------------------------------------*/
 
+.container {
+  margin: 0 auto;
+  max-width: 1080px;
+  padding: 2.5%;
+  width: 100%;
+}
+
 /* Main Body of Home Page */
 
 .site-content {
   font-size: 20px;
   font-weight: 300;
+  .site-main {
+    position: relative;
+    @include desktop {
+      margin: 4.5rem 175px 1.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
   .entry-content {
     margin-top: 20px;
     margin-bottom: 24px;
@@ -20,6 +36,9 @@
     @include tablet {
       font-size: 1.35rem;
     }
+    @include desktop {
+      font-size: 2.1rem;
+    }
   }
   h2 {
     font-size: 20px;
@@ -32,24 +51,12 @@
   }
   article::before {
     @include desktop {
-      font-family: 'FontAwesome';
-      content: '\f10d';
-      // position: absolute;
-      color: #0c0;
-      font-size: 40px;
-      left: 190px;
-      top: 280px;
+      @include fat-quote(left);
     }
   }
   article::after {
     @include desktop {
-      font-family: 'FontAwesome';
-      content: '\f10e';
-      // position: absolute;
-      color: #0c0;
-      font-size: 40px;
-      top: 280px;
-      right: 200px;
+      @include fat-quote(right);
     }
   }
 }
@@ -62,6 +69,9 @@
   font-weight: 500;
   font-size: 16px;
   padding: 12px 36px;
+  &:focus {
+    outline: 0;
+  }
 }
 
 /* All Archives Page */

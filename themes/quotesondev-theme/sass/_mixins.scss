@@ -18,3 +18,17 @@ $desktop-width: 1080px;
     @content;
   }
 }
+@mixin fat-quote($position) {
+  @if $position == right {
+    content: '\f10d';
+    left: -175px;
+  } @else if $position == left {
+    content: '\f10e';
+    right: -175px;
+  }
+  font-family: 'FontAwesome';
+  position: absolute;
+  color: #0c0;
+  font-size: 120px;
+  top: -25px;
+}

@@ -9,6 +9,9 @@
     @include tablet {
       display: flex;
     }
+    @include desktop {
+      justify-content: flex-end;
+    }
   }
   .footer-navigation {
     position: relative;
