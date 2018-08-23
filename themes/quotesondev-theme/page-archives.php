@@ -8,7 +8,7 @@
 get_header(); ?>
 
 	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+		<main id="main" class="archive-main" role="main">
 
          <section class="browse-archives">
             <header class="entry-header">
