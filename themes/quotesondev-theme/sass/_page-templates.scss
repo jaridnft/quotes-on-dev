@@ -16,7 +16,7 @@
   .site-main {
     position: relative;
     @include desktop {
-      margin: 4.5rem 175px 1.5rem;
+      margin: 4rem 175px 1.5rem;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -60,14 +60,7 @@
   }
 }
 #new-quote-button {
-  background: none;
-  border: 2px $color__link solid;
-  box-shadow: none;
-  color: $color__link;
-  text-shadow: none;
-  font-weight: 500;
-  font-size: 16px;
-  padding: 12px 36px;
+  @include button;
   &:focus {
     outline: 0;
   }
@@ -143,6 +136,56 @@
 
 /* Submit a Quote Page */
 
+.quote-submission {
+  width: 100%;
+  &::before {
+    @include desktop {
+      @include fat-quote(left);
+    }
+  }
+  &::after {
+    @include desktop {
+      @include fat-quote(right);
+    }
+  }
+  #quote-author,
+  #quote-content,
+  #quote-source,
+  #quote-source-url {
+    display: block;
+    background: $color__background-body;
+    border: 1px $color__link solid;
+    color: white;
+    &:focus {
+      border: 1px grey solid;
+      outline: 0;
+    }
+  }
+  label {
+    margin: 10px 0;
+    display: block;
+  }
+  input[type='submit'] {
+    @include button;
+    margin: 25px 0;
+  }
+  h1 {
+    @include desktop {
+      margin: 0 0 25px 0;
+    }
+  }
+  p {
+    font-size: 20px;
+    a {
+      text-decoration: none;
+    }
+  }
+}
+
 /* 404 Page */
 
 /* Search Page */
+
+/* Category Page */
+
+/* Tag Page */

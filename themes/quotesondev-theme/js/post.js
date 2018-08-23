@@ -18,7 +18,7 @@
     })
       .done(() => {
         $('.entry-header').after(`<p>${apiVars.success}</p>`);
-        $('.quote-submission-wrapper').hide(0);
+        $('.quote-submission-wrapper').slideUp();
       })
       .fail(() => alert(apiVars.failure));
   });

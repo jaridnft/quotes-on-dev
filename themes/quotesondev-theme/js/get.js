@@ -16,7 +16,7 @@
       .done(data => {
         history.pushState(null, null, `${apiVars.rootUrl}/${data[0].slug}`);
         $('.entry-content p').html(data[0].content.rendered);
-        $('.entry-title').html('— ' + data[0].title.rendered);
+        $('.entry-title').html(`&mdash; ${data[0].title.rendered}`);
         if (data[0]._qod_quote_source !== '') {
           if (data[0]._qod_quote_source_url === '') {
             $('.source').html(`, ${data[0]._qod_quote_source}`);

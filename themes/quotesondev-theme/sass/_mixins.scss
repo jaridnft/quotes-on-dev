@@ -32,3 +32,13 @@ $desktop-width: 1080px;
   font-size: 120px;
   top: -25px;
 }
+@mixin button() {
+  background: none;
+  border: 2px $color__link solid;
+  box-shadow: none;
+  color: $color__link;
+  text-shadow: none;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 12px 36px;
+}
