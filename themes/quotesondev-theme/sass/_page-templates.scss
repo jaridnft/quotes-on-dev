@@ -9,7 +9,7 @@
   width: 100%;
 }
 
-/* Main Body of Home Page */
+/* Main Body of index/single.php */
 
 .site-content {
   font-size: 20px;
@@ -74,6 +74,24 @@
   }
 }
 
+/* About page (page.php) */
+
+.about-main {
+  @extend .site-main;
+  .entry-title {
+    font-size: 32px;
+  }
+  p {
+    margin-top: 16px;
+    margin-top: 24px;
+    font-size: 16px;
+  }
+}
+
 /* All Archives Page */
 
 /* Submit a Quote Page */
+
+/* 404 Page */
+
+/* Search Page */
