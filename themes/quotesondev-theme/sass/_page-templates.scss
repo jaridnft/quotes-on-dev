@@ -194,25 +194,6 @@
 
 .error-404 {
   margin-right: auto;
-  .clearfix {
-    border: 0;
-    padding-left: 0;
-    margin-left: 0;
-  }
-  .search-submit {
-    background: 0;
-    box-shadow: none;
-    text-shadow: none;
-    border: 0;
-    color: $color__link;
-    font-size: 20px;
-    padding: 10px;
-  }
-  .search-field {
-    background-color: $color__background-body;
-    border: 2px $color__link solid;
-    padding: 3px 8px;
-  }
   &::before {
     @include desktop {
       @include fat-quote(left);
@@ -234,9 +215,117 @@
     margin-bottom: 15px;
   }
 }
+.clearfix {
+  border: 0;
+  padding-left: 0;
+  margin-left: 0;
+}
+.search-submit {
+  background: 0;
+  box-shadow: none;
+  text-shadow: none;
+  border: 0;
+  color: $color__link;
+  font-size: 20px;
+  padding: 10px;
+  &:focus {
+    outline: 0;
+  }
+}
+.search-field {
+  background-color: $color__background-body;
+  border: 2px $color__link solid;
+  padding: 3px 8px;
+  color: white;
+  &:focus {
+    outline: 0;
+    border: 2px grey solid;
+    color: white;
+  }
+}
 
-/* Search Page */
+/* Search Results Page */
 
-/* Category Page */
+.search-main {
+  @extend .site-main;
+  &::before {
+    @include desktop {
+      @include fat-quote(left);
+    }
+  }
+  &::after {
+    @include desktop {
+      @include fat-quote(right);
+    }
+  }
+  article {
+    margin-right: auto;
+  }
+  .page-header {
+    margin-right: auto;
+    width: 100%;
+    border-bottom: 0.5px white dotted;
+    h1 {
+      font-size: 32px;
+      font-weight: 500;
+      margin-bottom: 25px;
+      @include desktop {
+        margin-top: 0;
+      }
+    }
+  }
+  .entry-header {
+    margin-top: 20px;
+    a {
+      font-size: 24px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+  }
+  .entry-summary p {
+    font-size: 16px;
+  }
+}
 
-/* Tag Page */
+/* Category (archive.php) Page */
+
+.archive-main {
+  .page-header {
+    margin-right: auto;
+    width: 100%;
+    border-bottom: 0.5px white dotted;
+    h1 {
+      font-size: 32px;
+      font-weight: 500;
+      margin-bottom: 25px;
+      @include desktop {
+        margin-top: 0;
+      }
+    }
+  }
+  article {
+    margin-bottom: 0;
+    border-bottom: 0.5px white dotted;
+    p {
+      margin-top: 40px;
+    }
+    h2 {
+      font-weight: 200;
+      font-size: 20px;
+      display: inline;
+    }
+  }
+}
+.number-pagination {
+  margin-top: 40px;
+  margin-right: auto;
+  a {
+    font-size: 16px;
+    text-decoration: none;
+    padding: 0 4px;
+  }
+  .current {
+    @extend a;
+    color: white;
+  }
+}
