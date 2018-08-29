@@ -1,0 +1,38 @@
+{
+  "name": "quotesondev-starter",
+  "version": "1.0.0",
+  "description": "A WordPress starter theme for the Quotes on Dev project, forked from Underscores.",
+  "main": "gulpfile.js",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-eslint": "^7.1.1",
+    "babel-preset-latest": "^6.22.0",
+    "browser-sync": "^2.23.6",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^4.1.0",
+    "gulp-babel": "^6.1.2",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-eslint": "^4.0.2",
+    "gulp-prettyerror": "^1.2.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^3.0.0",
+    "jquery": "^3.3.1"
+  },
+  "prettier": {
+    "singleQuote": true
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/redacademy/quotesondev-starter.git"
+  },
+  "author": "mandiwise",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/redacademy/quotesondev-starter/issues"
+  },
+  "homepage": "https://github.com/redacademy/quotesondev-starter#readme"
+}

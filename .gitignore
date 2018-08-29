@@ -26,6 +26,8 @@ ehthumbs.db
 !themes/
 !uploads/
 !README.md
+!gulpfile.js
+!package.json
  
 # Ignore everything in "plugins" except certain plugins. #
 plugins/*
