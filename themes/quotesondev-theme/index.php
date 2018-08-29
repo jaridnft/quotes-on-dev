@@ -9,24 +9,24 @@ get_header(); ?>
 
 <main id="main" class="site-main" role="main">
 
-    <?php if (have_posts()) : ?>
+	<?php if ( have_posts() ) : ?>
 
-        <?php /* Start the Loop */ ?>
-        <?php while (have_posts()) : the_post(); ?>
+		<?php /* Start the Loop */ ?>
+		<?php while ( have_posts() ) : the_post(); ?>
 
-            <?php
-            /**
-             * Content Template
-             */
-            get_template_part('template-parts/content'); ?>
+			<?php
+			/**
+			 * Content Template
+			 */
+			get_template_part( 'template-parts/content' ); ?>
 
-        <?php endwhile; ?>
+		<?php endwhile; ?>
 
-    <?php else : ?>
+	<?php else : ?>
 
-        <?php get_template_part('template-parts/content', 'none'); ?>
+		<?php get_template_part( 'template-parts/content', 'none' ); ?>
 
-    <?php endif; ?>
+	<?php endif; ?>
 
 </main><!-- #main -->
 

@@ -12,10 +12,10 @@ get_header(); ?>
 
         <section class="quote-submission">
             <header class="entry-header">
-                <?php the_title('<h1 class="entry-title">', '</h1>'); ?>
+				<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
             </header><!-- .entry-header -->
 
-            <?php if (is_user_logged_in() && current_user_can('edit_posts')) : ?>
+			<?php if ( is_user_logged_in() && current_user_can( 'edit_posts' ) ) : ?>
 
                 <div class="quote-submission-wrapper">
                     <form name="quoteForm" id="quote-submission-form">
@@ -43,13 +43,13 @@ get_header(); ?>
                     <p class="submit-success-message" style="display:none;"></p>
                 </div>
 
-            <?php else : ?>
+			<?php else : ?>
 
                 <p>Sorry, you must be logged in to submit a quote!</p>
 
-                <p><?php echo sprintf('<a href="%1s">%2s</a>', esc_url(wp_login_url()), 'Click here to login.'); ?></p>
+                <p><?php echo sprintf( '<a href="%1s">%2s</a>', esc_url( wp_login_url() ), 'Click here to login.' ); ?></p>
 
-            <?php endif; ?>
+			<?php endif; ?>
         </section>
 
     </main><!-- #main -->
