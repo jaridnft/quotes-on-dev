@@ -11,9 +11,9 @@ The intention of this project is get experience with WP's REST API. The website 
 ## Technology
 
 - JavaScript ES6 / [jQuery](https://jquery.com/)
-- [WordPress](https://wordpress.org/) / [REST API](https://developer.wordpress.org/rest-api/)
-- [Gulp](https://gulpjs.com/)
-- [Scss](https://sass-lang.com/) / CSS
+- [WordPress](https://wordpress.org/) / [REST API](https://developer.wordpress.org/rest-api/) / PHP
+- NPM / [Gulp](https://gulpjs.com/)
+- [Sass](https://sass-lang.com/) / CSS
 
 ## Code Sample
 
@@ -37,3 +37,35 @@ $.ajax({
   })
   .fail(() => alert(apiVars.failure));
 ```
+## Setup
+
+**Install WordPress:**
+
+- [Download Wordpress](https://wordpress.org/latest.zip) and place directory at root of server (you'll need a tool like [MAMP](https://www.mamp.info/en/) if you wish to host locally)
+- Replace `themes`, `plugins` and `uploads` folders from install with ones in this repo
+
+**Initialize NPM:**
+
+`> npm init`
+
+**Install Gulp:**
+
+`> npm install`
+
+**Convert Sass files to CSS:**
+
+`> gulp sass`
+
+**Call Babel & Uglify on JS files:**
+
+`> gulp scripts`
+
+**Launch Browser-Sync to automatically update changes:**
+
+`> gulp browser-sync`
+
+**Watch changes to Sass/JS and automatically run scripts/sass:**
+
+`> gulp watch` or `gulp`
+
+## @TODO
