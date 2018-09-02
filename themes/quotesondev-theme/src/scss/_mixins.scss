@@ -41,4 +41,12 @@ $desktop-width: 1080px;
   font-weight: 500;
   font-size: 16px;
   padding: 12px 36px;
+  &:focus {
+    outline: 0;
+  }
+  &:hover {
+    box-shadow: none;
+    color: $color__link-hover;
+    border-color: $color__link-hover;
+  }
 }

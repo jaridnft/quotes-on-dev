@@ -1,0 +1,44 @@
+/* 
+ * Search Results Page 
+ */
+
+.search-main {
+  @extend .site-main;
+  &::before {
+    @include desktop {
+      @include fat-quote(left);
+    }
+  }
+  &::after {
+    @include desktop {
+      @include fat-quote(right);
+    }
+  }
+  article {
+    margin-right: auto;
+  }
+  .page-header {
+    margin-right: auto;
+    width: 100%;
+    border-bottom: 0.5px white dotted;
+    h1 {
+      font-size: 32px;
+      font-weight: 500;
+      margin-bottom: 25px;
+      @include desktop {
+        margin-top: 0;
+      }
+    }
+  }
+  .entry-header {
+    margin-top: 20px;
+    a {
+      font-size: 24px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+  }
+  .entry-summary p {
+    font-size: 16px;
+  }
+}

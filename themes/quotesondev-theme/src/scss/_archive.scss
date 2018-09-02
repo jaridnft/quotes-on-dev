@@ -1,0 +1,42 @@
+/* Category (archive.php) Page */
+
+.archive-main {
+  .page-header {
+    margin-right: auto;
+    width: 100%;
+    border-bottom: 0.5px white dotted;
+    h1 {
+      font-size: 32px;
+      font-weight: 500;
+      margin-bottom: 25px;
+      @include desktop {
+        margin-top: 0;
+      }
+    }
+  }
+  article {
+    margin-bottom: 0;
+    border-bottom: 0.5px white dotted;
+    p {
+      margin-top: 40px;
+    }
+    h2 {
+      font-weight: 200;
+      font-size: 20px;
+      display: inline;
+    }
+  }
+}
+.number-pagination {
+  margin-top: 40px;
+  margin-right: auto;
+  a {
+    font-size: 16px;
+    text-decoration: none;
+    padding: 0 4px;
+  }
+  .current {
+    @extend a;
+    color: white;
+  }
+}

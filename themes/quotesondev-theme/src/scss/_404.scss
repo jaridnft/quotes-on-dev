@@ -1,0 +1,59 @@
+/* 
+ * 404 Page 
+ */
+
+.error-404 {
+  margin-right: auto;
+  &::before {
+    @include desktop {
+      @include fat-quote(left);
+    }
+  }
+  &::after {
+    @include desktop {
+      @include fat-quote(right);
+    }
+  }
+  h1 {
+    @include desktop {
+      margin-top: 0;
+      font-size: 1.75rem;
+    }
+  }
+  p {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+}
+.clearfix {
+  border: 0;
+  padding-left: 0;
+  margin-left: 0;
+}
+.search-submit {
+  background: 0;
+  box-shadow: none;
+  text-shadow: none;
+  border: 0;
+  color: $color__link;
+  font-size: 20px;
+  padding: 10px;
+  &:focus {
+    outline: 0;
+  }
+  &:hover {
+    box-shadow: none;
+    color: $color__link-hover;
+  }
+}
+.search-field {
+  background-color: $color__background-body;
+  border: 2px $color__link solid;
+  padding: 3px 8px;
+  color: white;
+  &:focus {
+    outline: 0;
+    border: 2px grey solid;
+    color: white;
+  }
+}

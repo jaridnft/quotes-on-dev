@@ -1,0 +1,56 @@
+/* 
+ * Main Body of index/single.php 
+ */
+
+.site-content {
+  font-size: 20px;
+  font-weight: 300;
+  .site-main {
+    position: relative;
+    @include desktop {
+      margin: 4rem 175px 1.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  .entry-content {
+    margin-top: 20px;
+    margin-bottom: 24px;
+  }
+  .entry-meta {
+    margin-bottom: 48px;
+  }
+  p {
+    margin: 0;
+    max-width: 100%;
+    @include tablet {
+      font-size: 1.35rem;
+    }
+    @include desktop {
+      font-size: 2.1rem;
+    }
+  }
+  h2 {
+    font-size: 20px;
+    font-weight: 300;
+    display: inline;
+  }
+  .source a {
+    text-decoration: none;
+    font-style: italic;
+  }
+  article::before {
+    @include desktop {
+      @include fat-quote(left);
+    }
+  }
+  article::after {
+    @include desktop {
+      @include fat-quote(right);
+    }
+  }
+}
+.new-quote-button {
+  @include button;
+}
