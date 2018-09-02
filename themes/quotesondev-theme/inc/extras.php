@@ -99,3 +99,12 @@ function qod_login_url( $url )
     return get_bloginfo(home_url());
 }
 add_filter('login_headerurl', 'qod_login_url');
+
+/**
+ * Add Favicon to backend of WordPress.
+ */
+function show_favicon() {
+	echo '<link href="'.get_stylesheet_directory_uri().'/assets/images/favicon.ico" rel="icon" type="image/x-icon">';
+}
+add_action('admin_head', 'show_favicon');
+ 

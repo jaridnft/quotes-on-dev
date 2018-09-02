@@ -12,7 +12,8 @@
         _qod_quote_source: $('#quote-source').val(),
         _qod_quote_source_url: $('#quote-source-url').val(),
         title: $('#quote-author').val(),
-        content: $('#quote-content').val()
+        content: $('#quote-content').val(),
+        status: 'pending'
       },
       beforeSend: xhr => xhr.setRequestHeader('X-WP-Nonce', apiVars.nonce)
     })

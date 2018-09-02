@@ -2,7 +2,9 @@
 
 #### Author: Jarid Warren [ <jaridwarren@gmail.com> ]
 
-![alt-text](./themes/quotesondev-theme/screenshot.png 'Quotes on Dev Theme Image')
+WordPress based quote generator that uses a REST 'GET' API to fetch posts from the backend. In addition, a section to submit your own quotes is included and executed with the 'POST' API.
+
+<img src="/themes/quotesondev-theme/assets/images/get-demo.gif" width="425"><img src="/themes/quotesondev-theme/assets/images/post-demo.gif" width="425">
 
 ## Motivation
 
@@ -17,7 +19,7 @@ The intention of this project is get experience with WP's REST API. The website 
 
 ## Code Sample
 
-Each time a new quote is input, an ajax 'POST' request grabs field data to send to the WordPress backend:
+Each time a new quote is input, an ajax 'POST' request grabs field data to send to the WordPress backend. Here, custom fields are used to store the quote source and author information:
 
 ```javascript
 $.ajax({
@@ -27,7 +29,8 @@ $.ajax({
     _qod_quote_source: $('#quote-source').val(),
     _qod_quote_source_url: $('#quote-source-url').val(),
     title: $('#quote-author').val(),
-    content: $('#quote-content').val()
+    content: $('#quote-content').val(),
+    status: 'pending'
   },
   beforeSend: xhr => xhr.setRequestHeader('X-WP-Nonce', apiVars.nonce)
 })
@@ -37,6 +40,7 @@ $.ajax({
   })
   .fail(() => alert(apiVars.failure));
 ```
+
 ## Setup
 
 **Install WordPress:**
@@ -69,3 +73,7 @@ $.ajax({
 `> gulp watch` or `gulp`
 
 ## @TODO
+
+- Create a custom WP API endpoint with your custom field data included,
+  rather than modifying the exist post endpoint (this would be considered a
+  better practice)
