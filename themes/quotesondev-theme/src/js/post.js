@@ -21,6 +21,13 @@
         $('.entry-header').after(`<p>${apiVars.success}</p>`);
         $('.quote-submission-wrapper').slideUp();
       })
-      .fail(() => alert(apiVars.failure));
+      .fail(() => {
+        $('.entry-header').after(
+          `<p style="color:red;">${
+            apiVars.failure
+          } Please refresh the page and try again.</p>`
+        );
+        $('.quote-submission-wrapper').slideUp();
+      });
   });
 })(jQuery);
