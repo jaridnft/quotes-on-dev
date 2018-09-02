@@ -2,7 +2,7 @@
   'use strict';
   let lastPage = '';
 
-  $('#new-quote-button').on('click', function(event) {
+  $('.new-quote-button').on('click', function(event) {
     event.preventDefault();
     let lastPage = document.URL;
 
