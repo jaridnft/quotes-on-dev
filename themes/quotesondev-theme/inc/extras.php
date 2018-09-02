@@ -68,3 +68,34 @@ add_filter( 'enter_title_here', 'qod_change_title_here_text' );
 	}
  }
  add_action( 'pre_get_posts', 'qod_modify_archives' );
+
+ /**
+ * The following changes the login logo of wp-admin 
+ */ 
+
+function qod_login_logo()
+{
+    echo '<style type="text/css">                                                                   
+	body.login div#login h1 a { 
+		background-image:url('.get_stylesheet_directory_uri().'/assets/images/qod-logo-black.svg) !important; 
+		background-size: 300px 53px !important;
+		width: 320px;
+		height: 55px;
+		margin: 0 0 25px 0;
+	} 
+	#loginform {
+		margin-top: 0;
+	}
+	</style>';
+}
+add_action('login_head', 'qod_login_logo');
+
+/**
+ * The following changes the logo url 
+ */
+
+function qod_login_url( $url )
+{
+    return get_bloginfo(home_url());
+}
+add_filter('login_headerurl', 'qod_login_url');

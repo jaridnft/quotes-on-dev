@@ -1,20 +1,21 @@
-const gulp = require('gulp');
-const prettyError = require('gulp-prettyerror');
-const sass = require('gulp-sass');
-const autoprefixer = require('gulp-autoprefixer');
-const rename = require('gulp-rename');
-const cssnano = require('gulp-cssnano');
-const uglify = require('gulp-uglify');
-const eslint = require('gulp-eslint');
-const browserSync = require('browser-sync');
-const babel = require('gulp-babel');
+const gulp = require('gulp'),
+  prettyError = require('gulp-prettyerror'),
+  sass = require('gulp-sass'),
+  autoprefixer = require('gulp-autoprefixer'),
+  rename = require('gulp-rename'),
+  cssnano = require('gulp-cssnano'),
+  uglify = require('gulp-uglify'),
+  eslint = require('gulp-eslint'),
+  browserSync = require('browser-sync'),
+  babel = require('gulp-babel');
+
 const baseDir = './themes/quotesondev-theme';
 
 // Create basic Gulp tasks
 
-gulp.task('sass', function() {
+gulp.task('sass', () => {
   return gulp
-    .src(baseDir + '/sass/style.scss', { sourcemaps: true })
+    .src(`${baseDir}/src/scss/style.scss`, { sourcemaps: true })
     .pipe(prettyError())
     .pipe(sass())
     .pipe(
@@ -25,12 +26,12 @@ gulp.task('sass', function() {
     .pipe(gulp.dest('./'))
     .pipe(cssnano())
     .pipe(rename('style.min.css'))
-    .pipe(gulp.dest(baseDir + '/build/css'));
+    .pipe(gulp.dest(`${baseDir}/build/css`));
 });
 
-gulp.task('lint', function() {
+gulp.task('lint', () => {
   return gulp
-    .src([baseDir + '/js/*.js'])
+    .src([`${baseDir}/src/js/*.js`])
     .pipe(prettyError())
     .pipe(eslint())
     .pipe(eslint.format())
@@ -39,30 +40,32 @@ gulp.task('lint', function() {
 
 gulp.task(
   'scripts',
-  gulp.series('lint', function() {
+  gulp.series('lint', () => {
     return gulp
-      .src(baseDir + '/js/*.js')
-      .pipe(babel({
-        presets: ['latest']
-       }))
+      .src(`${baseDir}/src/js/*.js`)
+      .pipe(
+        babel({
+          presets: ['es2015']
+        })
+      )
       .pipe(uglify())
       .pipe(
         rename({
           extname: '.min.js'
         })
       )
-      .pipe(gulp.dest(baseDir + '/build/js'));
+      .pipe(gulp.dest(`${baseDir}/build/js`));
   })
 );
 
 // Set-up BrowserSync and watch
 
-gulp.task('browser-sync', function() {
+gulp.task('browser-sync', () => {
   const files = [
-    baseDir + '/build/css/*.css',
-    baseDir + '/build/js/*.js',
-    baseDir + '/*.php',
-    baseDir + '/**/*.php'
+    `${baseDir}/build/css/*.css`,
+    `${baseDir}/build/js/*.js`,
+    `${baseDir}/*.php`,
+    `${baseDir}/**/*.php`
   ];
 
   browserSync.init(files, {
@@ -72,9 +75,9 @@ gulp.task('browser-sync', function() {
   gulp.watch(files).on('change', browserSync.reload);
 });
 
-gulp.task('watch', function() {
-  gulp.watch(baseDir + '/js/*.js', gulp.series('scripts'));
-  gulp.watch(baseDir + '/sass/*.scss', gulp.series('sass'));
+gulp.task('watch', () => {
+  gulp.watch(`${baseDir}/src/js/*.js`, gulp.series('scripts'));
+  gulp.watch(`${baseDir}/src/scss/*.scss`, gulp.series('sass'));
 });
 
 gulp.task('default', gulp.series('watch'));
