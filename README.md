@@ -4,7 +4,7 @@
 
 WordPress based quote generator that uses a REST 'GET' API to fetch posts from the backend. In addition, a section to submit your own quotes is included and executed with the 'POST' API.
 
-<img src="/themes/quotesondev-theme/assets/images/get-demo.gif" width="425"><img src="/themes/quotesondev-theme/assets/images/post-demo.gif" width="425">
+<img src="/themes/quotesondev-theme/assets/images/readme-images/get-demo.gif" width="425"><img src="/themes/quotesondev-theme/assets/images/readme-images/post-demo.gif" width="425">
 
 ## Motivation
 
@@ -12,10 +12,10 @@ The intention of this project is get experience with WP's REST API. The website 
 
 ## Technology
 
-- JavaScript ES6 / [jQuery](https://jquery.com/)
-- [WordPress](https://wordpress.org/) / [REST API](https://developer.wordpress.org/rest-api/) / PHP
-- NPM / [Gulp](https://gulpjs.com/)
-- [Sass](https://sass-lang.com/) / CSS
+- <img src="./themes/quotesondev-theme/assets/images/readme-images/js.svg" width="15"> JavaScript ES6 / <img src="./themes/quotesondev-theme/assets/images/readme-images/jquery.svg" width="40"> jQuery
+- <img src="./themes/quotesondev-theme/assets/images/readme-images/wordpress.svg" width="18"> WordPress / REST API / <img src="./themes/quotesondev-theme/assets/images/readme-images/php.svg" width="23"> PHP
+- <img src="./themes/quotesondev-theme/assets/images/readme-images/npm.svg" width="20"> NPM / <img src="./themes/quotesondev-theme/assets/images/readme-images/gulp.svg" width="10"> Gulp
+- <img src="./themes/quotesondev-theme/assets/images/readme-images/sass.svg" width="20"> Sass / <img src="./themes/quotesondev-theme/assets/images/readme-images/css3.svg" width="12"> CSS3
 
 ## Code Sample
 
