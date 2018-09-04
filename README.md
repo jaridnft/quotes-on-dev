@@ -77,3 +77,4 @@ $.ajax({
 - Create a custom WP API endpoint with your custom field data included,
   rather than modifying the exist post endpoint (this would be considered a
   better practice)
+- Security: Escape PHP outputs & remove version number from backend
