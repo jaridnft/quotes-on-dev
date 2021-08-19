@@ -1,6 +1,6 @@
 # 'Quotes on Dev' Generator
 
-#### Author: Jarid Warren [ <jaridwarren@gmail.com> ]
+#### Author: Jarid [ <jarid@hey.com> ]
 
 WordPress based quote generator that uses a REST 'GET' API to fetch posts from the backend. In addition, a section to submit your own quotes is included and executed with the 'POST' API.
 
